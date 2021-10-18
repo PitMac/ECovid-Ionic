@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ECovid",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
