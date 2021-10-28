@@ -1,0 +1,36 @@
+.title {
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+.searchBox {
+  text-align: center;
+  width: 170px;
+  height: 100%;
+  border-bottom: 1px solid gray;
+}
+
+// ion-input {
+//   border-bottom: 1px solid gray;
+// }
+.item-has-focus {
+  --highlight-background: white;
+}
+
+ion-card {
+  border: 0.5px solid white;
+  border-radius: 10px;
+}
+.items {
+  margin: 3% 3%;
+  border: 0.5px solid white;
+  border-radius: 10px;
+}
+
+ion-list {
+  background-color: transparent;
+}
+
+.ion-ios-time {
+  color: red !important;
+}

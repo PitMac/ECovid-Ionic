@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{country.Country}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <app-card
+          title="New Confirmed"
+          [data]="country.NewConfirmed"
+        ></app-card>
+      </ion-col>
+      <ion-col size="6">
+        <app-card
+          title="Total Confirmed"
+          [data]="country.TotalConfirmed"
+        ></app-card>
+      </ion-col>
+      <ion-col size="6">
+        <app-card title="New Deaths" [data]="country.NewDeaths"></app-card>
+      </ion-col>
+      <ion-col size="6">
+        <app-card title="Total Deaths" [data]="country.TotalDeaths"></app-card>
+      </ion-col>
+      <ion-col size="6">
+        <app-card
+          title="New Recovered"
+          [data]="country.NewRecovered"
+        ></app-card>
+      </ion-col>
+      <ion-col size="6">
+        <app-card
+          title="Total Recovered"
+          [data]="country.TotalRecovered"
+        ></app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

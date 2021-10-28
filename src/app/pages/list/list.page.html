@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/global"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-item class="searchBox">
+        <ion-input
+          (keyup)="searchCountry()"
+          [(ngModel)]="searchText"
+          placeholder="Search a country"
+          size="3px"
+        ></ion-input>
+      </ion-item>
+    </ion-buttons>
+    <ion-title text-left>Countries</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar
+    color="dark"
+    *ngIf="countries.length === 0"
+    type="indeterminate"
+  ></ion-progress-bar>
+
+  <ion-list>
+    <ion-item class="items" *ngFor="let country of filteredCountries">
+      <ion-label class="title">{{country.Country}}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="onClick(country)">
+          <ion-icon
+            color="warning"
+            slot="icon-only"
+            name="star-outline"
+          ></ion-icon>
+        </ion-button>
+        <ion-button [routerLink]="['../../detail', country]">
+          <ion-icon
+            color="dark"
+            slot="icon-only"
+            name="arrow-forward-outline"
+          ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-card
+    [routerLink]="['../../detail', country]"
+    *ngFor="let country of filteredCountries"
+  >
+    <ion-card-header>
+      <ion-card-title class="title">{{country.Country}}</ion-card-title>
+    </ion-card-header>
+  </ion-card> -->
+</ion-content>

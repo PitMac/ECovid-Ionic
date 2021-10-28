@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar mode="md">
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="localData.countries.length === 0">
+    <ion-card-header>
+      <ion-card-title class="title"
+        >You don't have favorites <ion-icon name="sad-outline"></ion-icon
+      ></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list>
+    <ion-item class="items" *ngFor="let country of localData.countries">
+      <ion-label class="title">{{country.Country}}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="onClick(country)">
+          <ion-icon
+            color="danger"
+            slot="icon-only"
+            name="trash-outline"
+          ></ion-icon>
+        </ion-button>
+        <ion-button [routerLink]="['../../detail', country]">
+          <ion-icon
+            color="dark"
+            slot="icon-only"
+            name="arrow-forward-outline"
+          ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,17 @@
+ion-card {
+  display: flex !important;
+  height: 20vh;
+  border: 1px solid white;
+  border-radius: 15px;
+  align-items: center !important;
+  padding: 0 30px;
+}
+
+.title {
+  font-size: 1.8vh;
+}
+
+.number {
+  font-size: 2.5vh;
+  color: white;
+}
